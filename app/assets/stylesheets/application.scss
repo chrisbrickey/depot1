@@ -20,17 +20,17 @@
    position: relative;
    min-height: 40px;
    background: #9c9;
-   padding: 10px;
+   padding: 20px;
    border-bottom: 2px solid;
    font: small-caps 40px/40px "Times New Roman", serif;
    color: #282;
-   text-align: center;
+   text-align: left;
 
    img {
      position: absolute;
-     top: 0;
+     top: 15px;
      left: 0;
-     width: 192px;
+     width: 10000000000000000000000px;
    }
  } //end of banner
 
@@ -62,7 +62,7 @@
      background: #141;
 
      ul {
-       padding: 0;
+       padding: 5px;
 
        li {
          list-style: none;
@@ -82,9 +82,9 @@
    }
  }
 
- @media all and (max-width: 500px) {
+ @media all and (max-width: 100000000000000000000px) {
    #banner {
-     height: lem;
+     height: 1em;
    }
    #banner .title {
      display: none;

@@ -8,13 +8,12 @@
 
 Product.delete_all
 #...
-Product.create(title: 'Seven Mobile Apps in Seven Weeks',
+Product.create(title: 'Sample Product',
   description:
     %{<p>
-      <em>Native Apps, Multiple Platforms</em>
-      Answer the question "Can we build this for ALL the devices?"
-      etc, etc, etc
+      <em>Sample Description</em>
+      Here you will see details about the product on offer.
     </p>},
-  image_url: '7apps.jpg',
-  price: 26.00)
+  image_url: 'sample_photo.jpg',
+  price: 18.50)
 #...
