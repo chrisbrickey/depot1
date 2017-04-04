@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pragprog Books Online Store</title>
+    <title>My Shopping Cart App</title>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
@@ -10,11 +10,15 @@
 
   <body class="<%= controller.controller_name %>">
     <div id="banner">
-      <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
+      <%= image_tag("logo.svg", :alt => "My Shopping Cart App", :height => "1000") %>
       <span class="title"><%= @page_title %></span>
     </div>
     <div id="columns">
+
       <div id="side">
+        <br/>
+        <br/>
+        <br/>
         <ul>
           <li><a href="http://www....">Home</a></li>
           <li><a href="http://www..../faq">Questions</a></li>
@@ -23,6 +27,7 @@
         </ul>
       </div>
       <div id="main">
+        <br/>
         <%= yield %>
       </div>
     </div>
