@@ -3,7 +3,8 @@
 <h2>Your Cart</h2>
 <ul>
   <% @cart.line_items.each do |item| %>
-    <li><%= item.product.title %></li>
+    <li><%= item.quantity %> &times; <%= item.product.title %></li>
+    <!-- <li><%= item.product.title %></li> THIS LINE REPLACED WITH ABOVE LINE WHEN ADDED QUANTITY TO CART LISTINGS (added quantity before title) -->
   <% end %>
 </ul>
 

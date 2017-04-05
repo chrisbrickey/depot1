@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
 
   #added below line manually in attempt to link to new file I created (current_cart.rb) in the controllers/concerns folder
   include CurrentCart
@@ -65,6 +66,7 @@ class CartsController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_cart
       @cart = Cart.find(params[:id])
@@ -74,4 +76,10 @@ class CartsController < ApplicationController
     def cart_params
       params.fetch(:cart, {})
     end
+
+    def invalid_cart
+      logger.error "Attempt to access invalid cart #{params[:id]}"
+      redirect_to store_index_url, notice: 'Invalid cart' #This stores the 'Invalid cart' message in the flash
+    end
+
 end
