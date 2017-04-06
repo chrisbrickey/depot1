@@ -19,17 +19,19 @@
     <div id="columns">
       <div id="side">
         <div id="cart">
-          <%= render @cart %>
+          <%if @cart %>
+            <%= render @cart %>
+          <% end %>
         </div>
 
         <ul>
-          <li><a href="http://www....">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="http://www..../faq">Questions</a></li>
           <li><a href="http://www..../news">News</a></li>
           <li><a href="http://www..../contact">Contact</a></li>
         </ul>
       </div>
-      
+
       <div id="main">
         <br/>
         <%= yield %>
