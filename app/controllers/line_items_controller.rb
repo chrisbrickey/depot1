@@ -36,7 +36,7 @@ class LineItemsController < ApplicationController
       if @line_item.save
         format.html { redirect_to store_index_url }
         # format.html { redirect_to @line_item, notice: 'Line item was successfully created.' } THIS LINE WAS REPLACED WITH THE ABOVE LINE WHEN I ADDED A CART BUTTON
-        format.js
+        format.js { @current_item = @line_item }
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
