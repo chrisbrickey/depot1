@@ -1,8 +1,9 @@
+if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
+
 $('#cart').html("<%=j render(@cart) %>");
 //This tells the browser to replace the content of the element whose id is cart ('#cart') with that HTML
 //.html is a method
 //the remainder in parentheses is the the argument that gets passed into the .html method
 
 
-$('#current_item').css({'background-color':'#88ff88'})
-  animate({'background-color':'114411'}, 1000);
+$('#current_item').css({'background-color':'#88ff88'}), animate({'background-color':'114411'}, 1000);
