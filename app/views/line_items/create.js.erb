@@ -6,4 +6,5 @@ $('#cart').html("<%=j render(@cart) %>");
 //the remainder in parentheses is the the argument that gets passed into the .html method
 
 
-$('#current_item').css({'background-color':'#88ff88'}), animate({'background-color':'114411'}, 1000);
+//The last part of the below line isn't doing anything.  When I take it away, it does the same thing
+$('#current_item').css({'background-color':'#88ff88'}).animate({'background-color': rgb(100,100,100)}, 1000);
