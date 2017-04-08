@@ -67,6 +67,16 @@ class ProductsController < ApplicationController
     end
   end
 
+  def who_bought
+    @product = Product.find(params[:id]) #fetches a product
+    @latest_order = @product.orders.order(:updated_at).last
+    if stale?(@latest_order) #check to see if the request is stale
+      respond_to do |format|
+        format.atom
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
