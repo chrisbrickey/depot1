@@ -1,3 +1,8 @@
+//below line hides the notice "Thank you for your order" when someone starts adding new items to the cart.
+//We wouldn't need to do this if we didn't have AJAX implemented, but since we do have AJAX, we need to add this line of code
+//if it's a fresh session (no order made yet), there is no notice.  That's ok,  the below line will hide every instance of notice.  If it doesn't find any there's nothing to hide and the computer moves on to the next line.
+$('#notice').hide();
+
 if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
 
 $('#cart').html("<%=j render(@cart) %>");

@@ -27,14 +27,18 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(order_params)
+    @order = Order.new(order_params) #creates a new order object and initializes it from the form data
+    @order.add_line_items_from_cart(@cart) #adds the items that are already stored in the cart
 
     respond_to do |format|
+      #below line tells the order to save itself and IF the save succeeds, execute the code within the if statement
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        Cart.destroy(session[:cart_id]) #these next 2 lines get ready for the next order by deleting the cart from the session
+        session[:cart_id] = nil
+        format.html { redirect_to store_index_url, notice: 'Thank you for your order.' } #redisplay the catalog using the redirect_to command
         format.json { render :show, status: :created, location: @order }
-      else
-        format.html { render :new }
+      else #if the save is not successful
+        format.html { render :new } #redisplay the checkout form with the current cart
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
     end
