@@ -5,20 +5,23 @@
 
 //The book said to include this in the application.scss file, but I like it better here.
 .depot_form {
+
+  legend {
+    color: #dfd;
+    background: #141;
+    font-family: sans-serif;
+    padding: 0.2em 1em;
+    margin-bottom: 1em;
+  }
+
+  div {
+    margin-bottom: 0.3em;
+  }
+
+//This fieldset used to wrap legend and div but that crashed the browser so I separated them
   fieldset {
     background: #efe;
-
-    legend {
-      color: #dfd;
-      background: #141;
-      font-family: sans-serif;
-      padding: 0.2em 1em;
-    }
-
-    div {
-      margin-bottom: 0.3em;
-    }
-  }//of fieldset
+  }
 
   form {
     label {
