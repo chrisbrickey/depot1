@@ -33,8 +33,9 @@ class OrdersController < ApplicationController
     respond_to do |format|
       #below line tells the order to save itself and IF the save succeeds, execute the code within the if statement
       if @order.save
-        Cart.destroy(session[:cart_id]) #these next 2 lines get ready for the next order by deleting the cart from the session
+        Cart.destroy(session[:cart_id]) #these 2 lines get ready for the next order by deleting the cart from the session
         session[:cart_id] = nil
+        OrderMailer.received(@order).deliver_later #sends a confirmation email to the customer
         format.html { redirect_to store_index_url, notice: 'Thank you for your order.' } #redisplay the catalog using the redirect_to command
         format.json { render :show, status: :created, location: @order }
       else #if the save is not successful
