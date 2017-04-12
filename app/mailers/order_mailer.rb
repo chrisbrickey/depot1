@@ -6,7 +6,7 @@ class OrderMailer < ApplicationMailer
   #   en.order_mailer.received.subject
   #
   def received
-    @greeting = "Hi"  #Rails default
+    # @greeting = "Hi"  #Rails default
     @order = order
 
     mail to: "to@example.org", subject: 'Shopping Cart App Store Order Confirmation'
@@ -18,7 +18,7 @@ class OrderMailer < ApplicationMailer
   #   en.order_mailer.shipped.subject
   #
   def shipped
-    @greeting = "Hi"  #Rails default
+    # @greeting = "Hi"  #Rails default
     @order = order
 
     mail to: "to@example.org", subject: 'Shopping Cart App Store Order Shipped'

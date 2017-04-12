@@ -13,7 +13,7 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
   test "buying a product" do
 
     start_order_count = Order.count
-    ruby_book = proucts(:ruby)
+    ruby_book = products(:ruby)
 
     get "/"
     assert_response :success
