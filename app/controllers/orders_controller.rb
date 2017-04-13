@@ -1,6 +1,9 @@
 class OrdersController < ApplicationController
+  #below line negates the admin authorization for this part of the app
+  skip_before_action :authorize, only: [:new, :create]
+
   include CurrentCart
-  before_action :set_cart, only: [:new, :create]
+  before_action :set_cart, only: [:new, :create]  #may need to alter this line, not sure if it conflicts with line 3
   before_action :ensure_cart_isnt_empty, only: :new
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 

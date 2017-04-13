@@ -1,7 +1,10 @@
 class LineItemsController < ApplicationController
+  #below line negates the admin authorization for this part of the app
+  skip_before_action :authorize, only: :create
+
 
   include CurrentCart
-  before_action :set_cart, only: [:create]
+  before_action :set_cart, only: [:create] #not sure if this conflicts with line 3
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items

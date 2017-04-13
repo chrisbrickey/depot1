@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
-  before_action :set_cart, only: [:show, :edit, :update, :destroy]
+  #below line negates the admin authorization for this part of the app
+  skip_before_action :authorize, only: [:create, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
 
   #added below line manually in attempt to link to new file I created (current_cart.rb) in the controllers/concerns folder

@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+  #below line negates the admin authorization for this part of the app
+  skip_before_action :authorize
+
   def new
   end
 
