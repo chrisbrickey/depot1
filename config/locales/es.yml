@@ -1,0 +1,17 @@
+#Created this file from scratch per page 228
+#This file provides the translations for the Spanish version ('es') pages
+
+es:
+
+  layouts:
+    application:
+      title:          "Biblioteca"
+      home:           "Inicio"
+      questions:      "Preguntas"
+      news:           "Noticias"
+      contact:        "Contacto"
+
+  store:
+    index:
+      title_html:   "Su Cat&aacute"
+      add_html:     "A&ntilde;adir al Carrito"
