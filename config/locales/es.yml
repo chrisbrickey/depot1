@@ -3,6 +3,11 @@
 
 es:
 
+  store:
+    index:
+      title_html:  "Su Cat&aacute"
+      add_html:    "A&ntilde;adir al Carrito"
+
   layouts:
     application:
       title:          "Biblioteca"
@@ -10,11 +15,6 @@ es:
       questions:      "Preguntas"
       news:           "Noticias"
       contact:        "Contacto"
-
-  store:
-    index:
-      title_html:   "Su Cat&aacute"
-      add_html:    "A&ntilde;adir al Carrito"
 
   carts:
     cart:
@@ -43,19 +43,20 @@ es:
       submit:           "Realizar Pedido"
 
   activerecord:
+    models:
+      order:      "pedido"
+
+    attributes:
+      order:
+        address:  "Direccio&oacute;n"
+        name:     "Nombre"
+        email:    "E-mail"
+        pay_type: "Forma de pago"
+
     errors:
       messages:
         inclusion:      "no est&aacute; incluido en la lista"
         blank:          "no puede quedar en blanco"
-    models:
-      order:    "pedido"
-    attributes:
-      order:
-        address:        "Direcci&oacute;n"
-        name:           "Nombre"
-        email:          "E-mail"
-        pay_type:       "Forma de pago"
-        
   errors:
     template:
       body:     "Hay problemas con los siguientes campos:"

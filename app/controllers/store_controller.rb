@@ -1,4 +1,7 @@
 class StoreController < ApplicationController
+  #added below line in hopes of getting price_line (price and 'add to cart' button) to respond to English/Spanish switch...didn't work
+  before_action :set_i18n_locale_from_params
+
   #below line negates the admin authorization for this part of the app
   skip_before_action :authorize
 
