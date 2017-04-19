@@ -1,24 +1,21 @@
-# README
+# depot1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails app that allows administrators to fill a product catalog and end-users to shop and purchase those items.
 
-Things you may want to cover:
 
-* Ruby version
+# Setup
 
-* System dependencies
+* Ruby version: 2.4.0p0
+* Rails version: 5.0.2
+* Start server: `bin/rails server`
 
-* Configuration
 
-* Database creation
+# Tests
 
-* Database initialization
+* Run tests: `bin/rails test`
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# Upcoming Features
 
-* Deployment instructions
-
-* ...
+* Fix bug with English/Spanish toggle
+* Pass tests (app runs on local server but multiple tests are failing)
