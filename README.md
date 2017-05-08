@@ -1,5 +1,5 @@
 # depot1
-This is a Rails app that allows administrators to fill a product catalog and end-users to shop and purchase those items.
+This Rails app allows administrators to populate a product catalog. Shoppers can view and purchase those items.
 
 
 ## Setup
